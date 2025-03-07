@@ -2,7 +2,7 @@ import React from 'react'
 import './Catcard.css'
 import { Link } from 'react-router-dom'
 import indor from './storage/indoor plant.svg'
-import outdor from './storage/Outdor plant.svg'
+import outdor from './storage/Outdor Plant.svg'
 import cactus from './storage/Cactus.svg'
 import bonsai from './storage/Bonsai.svg'
 
