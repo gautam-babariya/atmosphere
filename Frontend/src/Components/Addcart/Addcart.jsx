@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddCart.css';
+import './Addcart.css';
 import img from './storage/plantimg.svg'
 import deletesvg from './storage/deletesvg.svg'
 import axios from 'axios';
