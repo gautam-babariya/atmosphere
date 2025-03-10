@@ -1,0 +1,19 @@
+#selling-page{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+#selling-page-content{
+    padding: 0 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+@media screen and (max-width: 600px) {
+    #selling-page{
+        gap: 2rem;
+    }
+    #selling-page-content{
+        padding: 0 0.5rem 0 0.5rem;
+    }
+}

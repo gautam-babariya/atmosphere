@@ -1,0 +1,87 @@
+# Node Modules
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.iml
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Build Output
+dist/
+build/
+coverage/
+out/
+*.log
+logs/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.pdb
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Debugging files
+debug.log
+error.log
+*.bak
+
+# Tests & Coverage
+coverage/
+.nyc_output/
+
+# Process files
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Miscellaneous
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+
+# Security
+config/
+secret.json
+*.pem
+*.key
+
+# cPanel-specific
+.cpanel/
+
+# Ignore dependencies from package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore generated files from Mongoose or other ORM tools
+*.dump

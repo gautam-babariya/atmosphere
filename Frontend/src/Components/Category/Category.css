@@ -1,0 +1,20 @@
+#category-title {
+    width: 177px;
+    height: 52px;
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#category-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 4rem;
+}
