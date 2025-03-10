@@ -70,7 +70,6 @@ pids/
 *.orig
 
 # Security
-config/
 secret.json
 *.pem
 *.key
