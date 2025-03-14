@@ -49,7 +49,9 @@
 }
 
 #email-input,
-#password-input {
+#password-input,
+#name-input,
+#address-input {
     width: 350px;
     padding: 10px;
     margin-bottom: 15px;
@@ -77,7 +79,28 @@
 
 #signin-button:hover {
     background-color: rgba(90, 172, 56, 1);
-
+}
+#dp-button {
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(90, 172, 56, 1);
+    /* Green background */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: var(--foot-font);
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 1rem;
+}
+#toggleme{
+    display: none;
+}
+#dp-button:hover {
+    background-color: rgba(90, 172, 56, 1);
 }
 
 #adjust-signin {
@@ -91,8 +114,31 @@
 }
 
 #email-input:focus,
-#password-input:focus {
+#password-input:focus,
+#name-input:focus,
+#address-input:focus {
     outline: none;
     border: none;
     box-shadow: 0px 0px 12px 0px rgba(121, 206, 85, 0.882);
+}
+#upload-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#upload-btn:hover {
+    background-color: #45a049;
+}
+#image-input{
+    display: none;
+}
+#file-name {
+    margin-top: 10px;
+    color: #555;
 }

@@ -1,0 +1,84 @@
+.dashboard-div {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+.temperature-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.weather-info h2{
+ font-weight: 700;
+}
+
+.sun-icon {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.details-dash {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detail-item-dash {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.detail-item-dash p{
+    margin: 0;
+}
+.detail-item-dash2 {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.detail-item-dash2 p{
+    margin: 0;
+}
+.detail-item-dash img{
+    margin-bottom: 15px;
+}
+
+.sunadjust p{
+    margin: 0;
+}
+.two-items{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 700px){
+    .dashboard-div {
+        flex-direction: column;
+    }
+    .weather-info {
+        margin-bottom: 30px;
+    }
+}

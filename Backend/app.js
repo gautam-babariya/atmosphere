@@ -4,6 +4,7 @@ const authRoutes = require("./Router/authroute");
 const productRoutes = require("./Router/productroute");
 const orderRoutes = require("./Router/orderroute");
 const Payment = require("./Router/payment");
+const Contact = require("./Router/contactroute")
 const cors = require('cors');
 const crypto = require('crypto');
 const{Cashfree} = require('cashfree-pg');
@@ -25,6 +26,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes); 
 app.use("/api/order", orderRoutes);
 app.use("/payment", Payment);
+app.use("/api/contact", Contact);
 
 app.get('/', (req, res) => {
     res.send('Server is available');

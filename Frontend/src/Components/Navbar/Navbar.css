@@ -77,7 +77,7 @@
     cursor: pointer;
     font-family: var(--body-font);
     font-weight: 400;
-
+    text-decoration: none;
 }
 
 .nav-sign-in-container {
@@ -211,15 +211,9 @@
     }
 }
 
-#nav-routing {
-    @media screen and (max-width: 1111px) {
-        gap: 0rem;
-    }
-}
 
 @media screen and (max-width: 1022px) {
     #nav-routing {
         display: none;
     }
-
 }

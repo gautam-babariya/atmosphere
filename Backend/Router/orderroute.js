@@ -73,31 +73,84 @@ router.post("/create", async (req, res) => {
 
 router.delete("/delete", async (req, res) => {
   try {
-      const { orderId, userId } = req.body; // Extract orderId and userId from request body
+    const { orderId, userId } = req.body; // Extract orderId and userId from request body
 
-      // Validate request body
-      if (!orderId || !userId) {
-          return res.status(400).json({ message: "Order ID and User ID are required" });
-      }
+    // Validate request body
+    if (!orderId || !userId) {
+      return res.status(400).json({ message: "Order ID and User ID are required" });
+    }
 
-      // Find the order by ID
-      const order = await Order.findById(orderId);
-      if (!order) {
-          return res.status(404).json({ message: "Order not found" });
-      }
+    // Find the order by ID
+    const order = await Order.findById(orderId);
+    if (!order) {
+      return res.status(404).json({ message: "Order not found" });
+    }
 
-      // Check if the order belongs to the given userId
-      if (order.user.toString() !== userId) {
-          return res.status(403).json({ message: "Unauthorized: You can only delete your own orders" });
-      }
+    // Check if the order belongs to the given userId
+    if (order.user.toString() !== userId) {
+      return res.status(403).json({ message: "Unauthorized: You can only delete your own orders" });
+    }
 
-      // Delete the order
-      await Order.findByIdAndDelete(orderId);
+    // Delete the order
+    await Order.findByIdAndDelete(orderId);
 
-      res.status(200).json({ message: "Order deleted successfully" });
+    res.status(200).json({ message: "Order deleted successfully" });
   } catch (error) {
-      res.status(500).json({ message: "Internal Server Error", error: error.message });
+    res.status(500).json({ message: "Internal Server Error", error: error.message });
   }
 });
+
+router.get("/alldata", async (req, res) => {
+  try {
+
+    // Find the order by ID
+    const order = await Order.find()
+      // .populate({
+      //   path: 'user',
+      //   select: 'name email' // Populate specific user fields
+      // })
+      // .populate({
+      //   path: 'items.product',
+      //   select: 'name price images' // Populate product details
+      // });
+      .populate('user', 'name email')             // Populate user details
+      .populate({
+        path: 'items.product',
+        select: 'name price images'            // Populate product details
+      })
+      .populate('payment')                        // Populate full payment details
+      .sort({ createdAt: -1 });
+
+
+    if (!order) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+
+    res.status(200).json(order);
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error", error: error.message });
+  }
+});
+
+router.post('/delivered', async (req, res) => {
+  const { orderId } = req.body;
+
+  try {
+      const updatedOrder = await Order.findByIdAndUpdate(
+          orderId,
+          { status: 'Delivered' },
+          { new: true } // Returns the updated document
+      );
+
+      if (!updatedOrder) {
+          return res.status(404).json({ error: 'Order not found' });
+      }
+
+      res.status(200).json({ message: 'Order marked as delivered', order: updatedOrder });
+  } catch (error) {
+      res.status(500).json({ error: 'Failed to update order status', details: error.message });
+  }
+});
+
 
 module.exports = router;

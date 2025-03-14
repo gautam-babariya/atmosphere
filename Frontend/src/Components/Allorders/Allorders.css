@@ -1,0 +1,34 @@
+#order-id{
+    font-size: 15px;
+    margin-top: 10px;
+}
+#check-order{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 2rem;
+    width: min-content;
+}
+#allorder-div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+.order-item{
+    flex-direction: column;
+}
+.order-track-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.order-complete.delivered{
+    background-color: rgba(35, 162, 4, 1);
+    cursor:not-allowed;
+    color: black;
+}
+.order-complete.pending{
+    background-color: rgb(255 165 0);
+}

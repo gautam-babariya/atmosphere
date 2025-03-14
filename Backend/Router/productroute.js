@@ -6,7 +6,6 @@ const Product = require("../Models/product");
 router.post("/add", async (req, res) => {
     try {
         const { name, description, price, category, images } = req.body;
-
         // Validation: Ensure all required fields are present
         if (!name || !description || !price || !category || !images || images.length < 1) {
             return res.status(400).json({ message: "All fields are required and must include at least one image." });

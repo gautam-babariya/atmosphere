@@ -1,0 +1,148 @@
+.order-track {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.order-item {
+    border: 2px solid #5AAC38;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+    width: inherit;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.item-details {
+    text-align: left;
+}
+.item-details h2{
+    font-size: 1rem;
+}
+
+.track-button {
+    background-color: lightblue;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.status-container {
+    margin-top: 10px;
+}
+
+.status-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 5px;
+    overflow: hidden;
+}
+
+.status-progress {
+    height: 100%;
+    transition: width 0.5s;
+}
+
+.status-progress.delivered {
+    width: 100%;
+    background-color: green;
+}
+
+.status-progress.pending {
+    width: 50%;
+    background-color: orange;
+}
+
+.status-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.order-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+
+.total-paid {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #5AAC38;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+
+#ordertrack-imgdiv {
+    /* width: 30%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+}
+
+#ordertrack-imgdiv img {
+    border-radius: 1rem;
+    width: 7rem;
+}
+
+#ordertrack-carddiv {
+    /* width: 70%; */
+    display: flex;
+    flex-direction: column;
+}
+
+#ordertrack-itemname {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    gap: 16rem;
+}
+#ordertrack-itemname h1{
+    font-size: 2rem;
+}
+#ordertrack-itemname h2{
+    font-size: 2rem;
+}
+@media screen and (max-width: 1350px) {
+    #ordertrack-itemname {
+        gap: 10rem;
+    }
+}
+@media screen and (max-width: 1130px) {
+    .order-item{
+        padding: 30px 5px 30px 5px;
+    }
+}
+@media screen and (max-width: 750px) {
+    #ordertrack-itemname h1 {
+        font-size: 1.5rem;
+    }
+    #ordertrack-itemname h2{
+        font-size: 1.5rem;
+    }
+    .item-details h2{
+        font-size: medium;
+    }
+    .status-labels span{
+        font-size: smaller;
+    }
+    #ordertrack-itemname {
+        gap: 5rem;
+    }
+    .order-item {
+        width: auto;
+    }
+}

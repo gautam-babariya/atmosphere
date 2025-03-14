@@ -1,0 +1,103 @@
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-self: flex-start;
+    font-size: 30px;
+    margin: 20px;
+    text-decoration: none;
+    color: #000;
+    margin: 0;
+    background-color: #fff;
+    background-color: white;
+    padding: 2px;
+    border-radius: 2px;
+    /* box-shadow: 0px 0px 25px 0px rgba(121, 206, 85, 0.882); */
+
+}
+
+.back-button img {
+    width: 25px;
+}
+
+#logo-image {
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#signin-title {
+    margin-bottom: 20px;
+    color: #000;
+    font-family: var(--foot-font);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+#email-input,
+#password-input {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #5cb85c;
+    /* Green border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#signin-button {
+    width: 350px;
+    padding: 10px;
+    background-color: rgba(90, 172, 56, 1);
+    /* Green background */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: var(--foot-font);
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+#signin-button:hover {
+    background-color: rgba(90, 172, 56, 1);
+
+}
+
+#adjust-signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 25px 0px rgba(121, 206, 85, 0.882);
+    padding: 4rem;
+    border-radius: 1rem;
+}
+
+#email-input:focus,
+#password-input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 12px 0px rgba(121, 206, 85, 0.882);
+}
+.new-user{
+    margin-top: 15px;
+    text-decoration: none;
+    color: black;
+}

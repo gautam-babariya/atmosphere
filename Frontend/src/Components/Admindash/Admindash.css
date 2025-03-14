@@ -1,0 +1,7 @@
+#admin-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-around;
+}

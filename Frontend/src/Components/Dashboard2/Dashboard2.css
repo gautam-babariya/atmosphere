@@ -1,0 +1,50 @@
+.dashboard2 {
+    background-color: #e7f3f3;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dashboard-title {
+    text-align: center;
+    color: #2e4d6a;
+}
+
+.chart-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.temperature-chart {
+    width: 100%;
+    height: 200px;
+}
+
+.highlight-point {
+    fill: #6239b7;
+}
+
+.dashed-line {
+    stroke: #6239b7;
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+}
+
+.value-label {
+    font-size: 14px;
+    fill: #6239b7;
+}
+
+.day-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.day {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #4c4c4c;
+}

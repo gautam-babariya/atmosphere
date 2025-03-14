@@ -13,7 +13,8 @@ function Cards() {
   useEffect(() => {
     axios.get(`${backendurl}/api/products`)
       .then(response => {
-        setProducts(response.data);        
+        setProducts(response.data);
+                
       })
       .catch(error => {
         console.error('There was an error fetching the products!', error);
