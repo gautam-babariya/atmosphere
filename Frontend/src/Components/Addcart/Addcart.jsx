@@ -86,7 +86,7 @@ const AddCart = ({ isOpen, onClose }) => {
             
             let checkoutOptions = {
                 paymentSessionId: sessionId,
-                redirectTarget: "_model",
+                redirectTarget: "_blank",
                 returnUrl: `${frontdurl}/payment-success?order_id=${orderIds}&payment_id=${paymentid}`
             };
             await cashfree.checkout(checkoutOptions);
