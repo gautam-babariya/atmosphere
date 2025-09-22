@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@botpress/webchat": "^3.2.7",
     "@cashfreepayments/cashfree-js": "^1.0.5",
     "axios": "^1.8.2",
     "dotenv": "^16.4.7",

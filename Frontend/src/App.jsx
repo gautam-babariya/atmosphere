@@ -18,11 +18,13 @@ import Allorderspage from './Pages/Allorderspage/Allorderspage';
 import PaymentSuccess from './Components/PaymentSuccess/PaymentSuccess'
 import Maindashboard from './Pages/Maindashboard/Maindashboard';
 import Adminlogin from './Components/Adminlogin/Adminlogin';
+import Chatbot from './Components/Chatbot/Chatbot';
 
 function App() {
   return (
     <>
       <Router>
+        <Chatbot />
         <Routes>
           <Route path="/" element={<Sellingpage />} />
           <Route path="/product/:id" element={<Productpage />} />

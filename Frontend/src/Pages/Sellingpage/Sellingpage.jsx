@@ -9,7 +9,6 @@ import Randompro from '../../Components/Randompro/Randompro';
 import Loader from '../../Subcomponents/Loader/Loader';
 
 
-
 function Sellingpage() {
   const [isLoggedIn, setIsLoggedIn] = useState(1);
   const [loading, setLoading] = useState(true);
