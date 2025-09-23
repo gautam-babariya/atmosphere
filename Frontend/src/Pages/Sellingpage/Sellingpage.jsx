@@ -11,7 +11,7 @@ import Loader from '../../Subcomponents/Loader/Loader';
 
 function Sellingpage() {
   const [isLoggedIn, setIsLoggedIn] = useState(1);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     // Simulate a loading process
     const timer = setTimeout(() => {
