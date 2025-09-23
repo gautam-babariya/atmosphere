@@ -17,7 +17,7 @@ function Sellingpage() {
     const timer = setTimeout(() => {
       setLoading(false);
 
-    }, 200);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
