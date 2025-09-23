@@ -14,7 +14,7 @@
     font-size: 2rem;
     color: white;
     font-family: "Merriweather", serif;
-    animation: moveText 1.5s infinite alternate;
+    animation: moveText 0.5s infinite alternate;
 }
 
 @media (max-width: 1107px) {
