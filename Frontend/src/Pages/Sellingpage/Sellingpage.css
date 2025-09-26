@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    background-color: #f4f4c3;
 }
 #selling-page-content{
     padding: 0 1.5rem 0 1.5rem;
@@ -16,4 +18,41 @@
     #selling-page-content{
         padding: 0 0.5rem 0 0.5rem;
     }
+}
+.video-wrapper {
+    border-radius: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* optional: limit width */
+  margin: 0 auto;   /* center horizontally */
+  aspect-ratio: 16 / 9; /* modern browsers keep correct ratio */
+  background: black;
+  overflow: hidden;
+}
+
+.yt-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.controls button {
+  padding: 8px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
 }

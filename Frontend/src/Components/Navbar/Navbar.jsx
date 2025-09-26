@@ -46,36 +46,36 @@ function Navbar() {
             setSearchValue('')
         }
     }
-    useEffect(() => {
-        axios.get(`${backendurl}/api/products`)
-            .then(response => {
-                const productNames = response.data.map(product => product.name);
-                setSuggestions(productNames);
-            })
-            .catch(error => {
-                console.error('There was an error fetching the products!', error);
-            });
-    }, []);
-    useEffect(() => {
-        try {
-            const productData = {
-                user_id: localStorage.getItem('user_id'),
-                mytoken: localStorage.getItem('mytoken'),
-            };
-            const backendurl = import.meta.env.VITE_BACKEND_URL;
-            axios.post(`${backendurl}/api/auth/verify`, productData)
-                .then((Response) => {
-                    if (Response.data.message == "Token and user ID are valid") {
-                        setIsVerified(true)
-                    }
-                    else {
-                        setIsVerified(false)
-                    }
-                })
-        } catch {
-            setIsVerified(false);
-        }
-    }, []);
+    // useEffect(() => {
+    //     axios.get(`${backendurl}/api/products`)
+    //         .then(response => {
+    //             const productNames = response.data.map(product => product.name);
+    //             setSuggestions(productNames);
+    //         })
+    //         .catch(error => {
+    //             console.error('There was an error fetching the products!', error);
+    //         });
+    // }, []);
+    // useEffect(() => {
+    //     try {
+    //         const productData = {
+    //             user_id: localStorage.getItem('user_id'),
+    //             mytoken: localStorage.getItem('mytoken'),
+    //         };
+    //         const backendurl = import.meta.env.VITE_BACKEND_URL;
+    //         axios.post(`${backendurl}/api/auth/verify`, productData)
+    //             .then((Response) => {
+    //                 if (Response.data.message == "Token and user ID are valid") {
+    //                     setIsVerified(true)
+    //                 }
+    //                 else {
+    //                     setIsVerified(false)
+    //                 }
+    //             })
+    //     } catch {
+    //         setIsVerified(false);
+    //     }
+    // }, []);
 
     const [cartOpen, setCartOpen] = useState(false);
     return (
