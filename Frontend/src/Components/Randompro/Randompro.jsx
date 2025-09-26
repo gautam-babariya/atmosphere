@@ -10,16 +10,16 @@ function Randompro() {
     const { id } = useParams();
     const [products, setProducts] = useState([]);
 
-    // useEffect(() => {
-    //     axios.get(`${backendurl}/api/products`)
-    //         .then(response => {
-    //             setProducts(response.data);
+    useEffect(() => {
+        axios.get(`${backendurl}/api/products`)
+            .then(response => {
+                setProducts(response.data);
 
-    //         })
-    //         .catch(error => {
-    //             console.error('There was an error fetching the products!', error);
-    //         });
-    // }, []);
+            })
+            .catch(error => {
+                console.error('There was an error fetching the products!', error);
+            });
+    }, []);
 
     const getRandomProducts = (arr, count) => {
         const shuffled = [...arr].filter(product => product.name.replace(/\s+/g, '') !== id)
